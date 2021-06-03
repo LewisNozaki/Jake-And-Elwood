@@ -172,26 +172,36 @@ li {
 ===================== */
 
 .header {
-  background: black;
-  display: none;
+  background: var(--black);
 }
 
 .header-content {
+  display: flex;
+  grid-column: 2 / -2;
+}
+
+.logo-link {
   background: var(--yellow);
+  padding-top: 2em;
 }
 
 .nav {
-  border: 1px solid black;
-  display: none;
+
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
 }
 
 .nav-item {
-  list-style: none;
-  text-decoration: none;
+
 }
 
-.nav-item a {
-  color: white;
+.nav-link {
+  color: var(--white);
 }
 
 /* ==================
@@ -256,5 +266,13 @@ li {
 
   .footer-main {
     grid-area: main;
+  }
+   
+  .footer-main {
+    text-align: left;
+  }
+
+  .social-list {
+    justify-content: flex-end;
   }
 }
