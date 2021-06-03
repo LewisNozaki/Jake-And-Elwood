@@ -5,6 +5,7 @@
   --black: #000000;
   --gray: #404040;
   --white: #FFFFFF;
+  --footer: #ebebeb;
 }
 
 *,
@@ -63,6 +64,12 @@ p {
   color: var(--yellow);
 }
 
+.section-title {
+  font-size: 1.125rem;
+  color: var(--black);
+  margin-top: 1.25em;
+}
+
 /* buttons */
 
 .btn {
@@ -77,6 +84,44 @@ p {
   background: var(--yellow);
   color: var(--black);
   justify-self: start;
+}
+
+/* lists */
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==================
+    General Layout
+===================== */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+}
+
+/* footer */
+
+.footer {
+  padding: 4em 0; 
+  background: var(--footer);
+  text-align: center;
+}
+
+.footer-main,
+.social-list {
+  grid-column: 2 / -2;
+}
+
+.social-list {
+  order: -1;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 /* ==================
@@ -116,9 +161,6 @@ p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  display: grid;
-  grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
 }
 
 .hero > * {
@@ -129,3 +171,11 @@ p {
       Info Section
 ======================= */
 
+.info {
+  padding: 4em 0;
+  text-align: center;
+}
+
+.col {
+  grid-column: 2 / -2;
+}
