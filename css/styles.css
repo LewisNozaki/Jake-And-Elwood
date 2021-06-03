@@ -22,7 +22,6 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100vh;
   font-family: 'Montserrat', sans-serif;
   color: var(--gray);
   line-height: 1.6;
@@ -112,6 +111,7 @@ li {
 .main-grid {
   display: grid;
   grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+  gap: 0 3em;
 }
 
 /* footer */
@@ -120,6 +120,14 @@ li {
   padding: 4em 0; 
   background: var(--footer);
   text-align: center;
+  grid-template-areas: 
+    ". social ."
+    ". main ."
+  ;
+}
+
+.footer-main {
+  grid-area: main;
 }
 
 .footer-main,
@@ -130,20 +138,20 @@ li {
 .footer-logo,
 .footer-text,
 .footer-fineprint {
-    opacity: .3;
+  opacity: .3;
 }
 
 .footer-fineprint {
-    font-size: .75rem;
-    margin-top: 4em;
+  font-size: .75rem;
+  margin-top: 4em;
 }
 
 .social-list {
   margin: 0 0 3em;
-  order: -1;
   display: flex;
   justify-content: center;
   align-self: center;
+  grid-area: social;
 }
 
 .social-link {
@@ -221,10 +229,32 @@ li {
 
 @media only screen and (min-width: 700px) {
   .main-grid {
-    grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+    grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(1em, 1fr);
+  }
+
+  .hero {
+    padding: 6em 0;
   }
 
   .hero > * {
     grid-column: 2 / span 2;
+  }
+
+  .col {
+    grid-column: span 1;
+  }
+
+  .col:first-child {
+    grid-column: 2 / span 1;
+  }
+
+  .footer {
+    grid-template-areas: 
+      ". main main social ."
+    ;
+  }
+
+  .footer-main {
+    grid-area: main;
   }
 }
