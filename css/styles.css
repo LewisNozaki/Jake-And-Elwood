@@ -41,3 +41,6 @@ p {
 
 /* Layouts */
 
+header {
+  border: 1px solid black;
+}
