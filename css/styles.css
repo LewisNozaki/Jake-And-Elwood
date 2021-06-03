@@ -1,5 +1,5 @@
 :root {
-  --yellow: #F18119;
+  --yellow: #fee600;
   --black: #000000;
   --gray: #404040;
   --white: #FFFFFF;
@@ -41,6 +41,50 @@ p {
 
 /* Layouts */
 
-header {
+.header {
+  background: black;
+  border: 1px solid white;
+}
+
+.header-content {
+  background: var(--yellow);
+}
+
+.nav {
   border: 1px solid black;
+  display: none;
+}
+
+.nav-item {
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-item a {
+  color: white;
+}
+
+.hero {
+  border: 1px solid white;
+  background-image: url(/assets/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.hero-title,
+.subtitle {
+  color: var(--white)
+}
+
+.special {
+  color: var(--yellow);
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid white;
+  background: var(--yellow);
+  font-size: 14px;
 }
