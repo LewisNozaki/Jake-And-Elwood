@@ -220,5 +220,11 @@ li {
 ===================== */
 
 @media only screen and (min-width: 700px) {
-  
+  .main-grid {
+    grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+  }
+
+  .hero > * {
+    grid-column: 2 / span 2;
+  }
 }
