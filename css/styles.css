@@ -226,6 +226,17 @@ li {
   color: #FFE600;
 }
 
+.close-nav {
+  border: 0;
+  background: 0;
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0.5em;
+  position: absolute;
+}
+
 /* ==================
         Hero
 ===================== */
