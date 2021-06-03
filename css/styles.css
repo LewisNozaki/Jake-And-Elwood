@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
 :root {
   --yellow: #fee600;
   --black: #000000;
   --gray: #404040;
   --white: #FFFFFF;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
 
 *,
 *:before,
@@ -22,9 +22,14 @@ body {
   margin: 0;
   width: 100%;
   height: 100vh;
-  background: plum;
   font-family: 'Montserrat', sans-serif;
+  color: var(--gray);
+  line-height: 1.6;
 }
+
+/* ==================
+      Typography
+===================== */
 
 h1 {
   font-size: 3rem;
@@ -35,15 +40,52 @@ h2,
   font-size: 1.125rem;
 }
 
+h1, h2, strong {
+  font-weight: 700;
+}
+
 p {
   font-size: 1rem;
 }
 
-/* Layouts */
+.hero-title {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.hero-title,
+.subtitle {
+  color: var(--white)
+}
+
+.special {
+  color: var(--yellow);
+}
+
+/* buttons */
+
+.btn {
+  margin-top: .5em;
+  padding: .5em 1.75em;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: var(--black);
+  justify-self: start;
+}
+
+/* ==================
+       Navigation
+===================== */
 
 .header {
   background: black;
-  border: 1px solid white;
+  display: none;
 }
 
 .header-content {
@@ -64,27 +106,26 @@ p {
   color: white;
 }
 
+/* ==================
+        Hero
+===================== */
+ 
 .hero {
-  border: 1px solid white;
+  padding: 4em 0;
   background-image: url(/assets/hero-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  object-fit: cover;
+
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
 }
 
-.hero-title,
-.subtitle {
-  color: var(--white)
+.hero > * {
+  grid-column: 2 / -2;
 }
 
-.special {
-  color: var(--yellow);
-}
+/* ====================
+      Info Section
+======================= */
 
-.btn {
-  display: inline-block;
-  border: 1px solid white;
-  background: var(--yellow);
-  font-size: 14px;
-}
