@@ -127,6 +127,17 @@ li {
   grid-column: 2 / -2;
 }
 
+.footer-logo,
+.footer-text,
+.footer-fineprint {
+    opacity: .3;
+}
+
+.footer-fineprint {
+    font-size: .75rem;
+    margin-top: 4em;
+}
+
 .social-list {
   margin: 0 0 3em;
   order: -1;
@@ -202,4 +213,12 @@ li {
 
 .col {
   grid-column: 2 / -2;
+}
+
+/* ==================
+    Media Queries
+===================== */
+
+@media only screen and (min-width: 700px) {
+  
 }
