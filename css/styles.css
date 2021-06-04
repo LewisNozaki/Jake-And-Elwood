@@ -27,6 +27,11 @@ body {
   line-height: 1.6;
 }
 
+.modal-open {
+  overflow: hidden;
+  position: fixed;
+}
+
 /* ==================
       Typography
 ===================== */
@@ -189,12 +194,14 @@ li {
   width: 100%;
   position: fixed;
   background: var(--black);
+  opacity: 0.9;
   top: 0;
   right: 0;
   bottom: 0;
   left: 100%;
   transform: translateX(0);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
 }
 
 .navigation-open {
@@ -213,7 +220,7 @@ li {
 }
 
 .nav-item {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-item:hover {
@@ -241,6 +248,16 @@ li {
   cursor: pointer;
   padding: 0.5em;
   position: absolute;
+}
+
+.open-nav {
+  border: 0;
+  background: 0;
+  color: var(--white);
+  cursor: pointer;
+  padding: .5em;
+  margin-left: auto;
+  font-size: 1.5em;
 }
 
 /* ==================
