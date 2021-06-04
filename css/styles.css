@@ -182,17 +182,22 @@ li {
 
 .logo-link {
   background: var(--yellow);
-  padding-top: 2em;
+  padding-top: 4em;
 }
 
 .nav {
   width: 100%;
-  position: absolute;
+  position: fixed;
   background: var(--black);
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
+  left: 100%;
+  transform: translateX(0);
+}
+
+.navigation-open {
+  transform: translateX(-100%);
 }
 
 .nav-list {
