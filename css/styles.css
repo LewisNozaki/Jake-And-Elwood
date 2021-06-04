@@ -178,6 +178,12 @@ li {
 
 .header {
   background: var(--black);
+  width: 100%;
+}
+
+.header-home {
+  background: transparent;
+  position: absolute;
 }
 
 .header-content {
@@ -265,15 +271,23 @@ li {
 ===================== */
  
 .hero {
-  padding: 4em 0;
+  padding-top: 10em;
+  padding-bottom: 6em;
   background-image: url(/assets/hero-bg.jpg);
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .hero > * {
   grid-column: 2 / -2;
+  margin-right: 20%;
+}
+
+@media only screen and (min-width: 400px) {
+  .hero > * {
+      margin-right: 20%;
+  }
 }
 
 /* ====================
@@ -299,7 +313,7 @@ li {
   }
 
   .hero {
-    padding: 6em 0;
+    padding: 12em 0;
   }
 
   .hero > * {
@@ -330,5 +344,31 @@ li {
 
   .social-list {
     justify-content: flex-end;
+  }
+
+  .open-nav,
+  .close-nav {
+    display: none;
+  }
+
+  .nav {
+    position: initial;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .nav-item {
+    margin-left: 2em;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .header-home .nav {
+    background: transparent;
   }
 }
