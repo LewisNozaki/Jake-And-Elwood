@@ -74,6 +74,19 @@ p {
   margin-top: 1.25em;
 }
 
+.page-title {
+  font-size: 3rem;
+}
+
+.page-subtitle {
+  font-size: 1.125rem;
+}
+
+.page-title, 
+.page-subtitle {
+  color: var(--black);
+}
+
 /* buttons */
 
 .btn {
@@ -294,10 +307,7 @@ li {
   About - Template Page
 ===================== */
 
-.page-title,
-.page-subtitle,
-.main-image,
-.main-text {
+.main-template > * {
   grid-column: 2 / -2;
 }
 
