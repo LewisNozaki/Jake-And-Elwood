@@ -87,6 +87,10 @@ p {
   color: var(--black);
 }
 
+.section-title:first-child {
+  margin-top: 0;
+}
+
 /* buttons */
 
 .btn {
@@ -307,16 +311,21 @@ li {
   About - Template Page
 ===================== */
 
+.main-template {
+  padding: 2em 0;
+}
+
 .main-template > * {
   grid-column: 2 / -2;
 }
 
 .page-title {
   text-align: center;
+  margin-bottom: 0;
 }
 
 .page-subtitle {
-  margin: 0;
+  margin: 0.5em 0 3em;
   text-align: center;
   font-weight: 600;
 }
@@ -325,10 +334,7 @@ li {
   width: 100%;
   box-shadow: 10px 10px black,
               20px 20px var(--yellow);
-}
-
-.main-text {
-  margin: 3em 0;
+  margin-bottom: 3em;
 }
 
 /* ====================
@@ -411,5 +417,15 @@ li {
 
   .header-home .nav {
     background: transparent;
+  }
+
+  /* About Page */
+
+  .main-image {
+    grid-column: 2;
+  }
+
+  .main-text {
+    grid-column: 3 / 5;
   }
 }
