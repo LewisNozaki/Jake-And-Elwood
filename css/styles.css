@@ -290,6 +290,37 @@ li {
   }
 }
 
+/* ==================
+  About - Template Page
+===================== */
+
+.page-title,
+.page-subtitle,
+.main-image,
+.main-text {
+  grid-column: 2 / -2;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.page-subtitle {
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.main-image {
+  width: 100%;
+  box-shadow: 10px 10px black,
+              20px 20px var(--yellow);
+}
+
+.main-text {
+  margin: 3em 0;
+}
+
 /* ====================
       Info Section
 ======================= */
