@@ -25,6 +25,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: var(--gray);
   line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
 }
 
 .modal-open {
@@ -32,6 +34,10 @@ body {
   position: fixed;
 }
 
+.container {
+  height: 100vh;
+  position: relative;
+}
 /* ==================
       Typography
 ===================== */
@@ -142,7 +148,6 @@ li {
 }
 
 /* footer */
-
 .footer {
   padding: 4em 0; 
   background: var(--footer);
@@ -408,7 +413,12 @@ textarea {
     Media Queries
 ===================== */
 
-@media only screen and (min-width: 700px) {
+@media (min-width: 700px) {
+  main,
+  .main-template {
+    padding-bottom: 370px;
+  }
+
   .main-grid {
     grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 350px)) minmax(1em, 1fr);
   }
@@ -427,6 +437,12 @@ textarea {
 
   .col:first-child {
     grid-column: 2 / span 1;
+  }
+
+  footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 
   .footer {
@@ -500,7 +516,7 @@ textarea {
     display: block;
     width: 30%;
     height: 3px;
-    background: var(--gray);
+    background: lightgray;
     margin: 2em auto;
   }
 

@@ -19,3 +19,17 @@ const openNav = (e) => {
 };
 
 openBtn.addEventListener("click", openNav);
+
+// Resizing
+
+// window.onresize = () => {
+//   let footer = document.getElementsByClassName("footer")[0];
+
+//   let main = document.getElementsByTagName("main")[0];
+  
+//   if (document.body.offsetWidth >= 700) {
+//     let footerHeight = 10 + footer.offsetHeight + "px";
+//     console.log(footerHeight);
+//     main.style.paddingBottom = footerHeight;
+//   }
+// };
